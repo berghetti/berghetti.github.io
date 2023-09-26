@@ -1,5 +1,0 @@
-baseURL = 'https://berghetti.github.io/'
-languageCode = 'pt-br'
-title = 'My Blog title'
-
-theme = 'dark-theme-editor'
