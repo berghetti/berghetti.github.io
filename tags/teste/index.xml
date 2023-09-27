@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on The my blog</title>
-    <link>https://berghetti.github.io/posts/</link>
-    <description>Recent content in Posts on The my blog</description>
+    <title>teste on The my blog</title>
+    <link>https://berghetti.github.io/tags/teste/</link>
+    <description>Recent content in teste on The my blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 26 Sep 2023 18:23:03 -0400</lastBuildDate><atom:link href="https://berghetti.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Sep 2023 18:23:03 -0400</lastBuildDate><atom:link href="https://berghetti.github.io/tags/teste/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First</title>
       <link>https://berghetti.github.io/posts/first/</link>
@@ -21,15 +21,6 @@ link
 negrito
 Copy 1 2 3 4 5 6 // comment int i = 0; for (; i &amp;lt; size; i++) { // todo } teste
 10 11 12 13 14 15 16 17 18 // ... code package main import &amp;#34;fmt&amp;#34; func main() { // hi fmt.Println(&amp;#34;Hello, World!&amp;#34;) } This is a regular paragraph.</description>
-    </item>
-    
-    <item>
-      <title>Markdown Syntax Guide</title>
-      <link>https://berghetti.github.io/posts/markdown-syntax/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://berghetti.github.io/posts/markdown-syntax/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
     </item>
     
   </channel>
