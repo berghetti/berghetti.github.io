@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>cteste1 on The my blog</title>
+    <title>cteste1 on Mayco Blog</title>
     <link>https://berghetti.github.io/categories/cteste1/</link>
-    <description>Recent content in cteste1 on The my blog</description>
+    <description>Recent content in cteste1 on Mayco Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Tue, 26 Sep 2023 18:23:03 -0400</lastBuildDate><atom:link href="https://berghetti.github.io/categories/cteste1/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>First</title>
+      <title>Meu Primeiro Post testeFirst</title>
       <link>https://berghetti.github.io/posts/first/</link>
       <pubDate>Tue, 26 Sep 2023 18:23:03 -0400</pubDate>
       
       <guid>https://berghetti.github.io/posts/first/</guid>
-      <description>Meu primeiro post O post Iniciando meu blog!
-italico
-teste de uma nova linha
-essa é uma nova linha?
-link
-negrito
-Copy 1 2 3 4 5 6 // comment int i = 0; for (; i &amp;lt; size; i++) { // todo } teste
-10 11 12 13 14 15 16 17 18 // ... code package main import &amp;#34;fmt&amp;#34; func main() { // hi fmt.Println(&amp;#34;Hello, World!&amp;#34;) } This is a regular paragraph.</description>
+      <description>Introdução Iniciando meu blog!
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing</description>
     </item>
     
   </channel>

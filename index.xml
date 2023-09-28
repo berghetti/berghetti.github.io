@@ -1,35 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The my blog</title>
+    <title>Mayco Blog</title>
     <link>https://berghetti.github.io/</link>
-    <description>Recent content on The my blog</description>
+    <description>Recent content on Mayco Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 26 Sep 2023 18:23:03 -0400</lastBuildDate><atom:link href="https://berghetti.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Sep 2023 19:08:17 -0400</lastBuildDate><atom:link href="https://berghetti.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>We Help Business Grow</title>
-      <link>https://berghetti.github.io/work/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>About</title>
+      <link>https://berghetti.github.io/about/</link>
+      <pubDate>Thu, 28 Sep 2023 19:08:17 -0400</pubDate>
       
-      <guid>https://berghetti.github.io/work/</guid>
-      <description>Lorem ipsum dolor sit amet, et essent mediocritatem quo, choro volumus oporteat an mei. Numquam dolores mel eu, mea docendi omittantur et, mea ea duis erat. Elit melius cu ius. Per ex novum tantas putant, ei his nullam aliquam apeirian. Aeterno quaestio constituto sea an, no eum intellegat assueverit.</description>
+      <guid>https://berghetti.github.io/about/</guid>
+      <description>Um blog sobre programação, Linux, redes e outros assuntos, provavelmente relacionados
+à computação, que eu possa ter interesse.</description>
     </item>
     
     <item>
-      <title>First</title>
+      <title>Meu Primeiro Post testeFirst</title>
       <link>https://berghetti.github.io/posts/first/</link>
       <pubDate>Tue, 26 Sep 2023 18:23:03 -0400</pubDate>
       
       <guid>https://berghetti.github.io/posts/first/</guid>
-      <description>Meu primeiro post O post Iniciando meu blog!
-italico
-teste de uma nova linha
-essa é uma nova linha?
-link
-negrito
-Copy 1 2 3 4 5 6 // comment int i = 0; for (; i &amp;lt; size; i++) { // todo } teste
-10 11 12 13 14 15 16 17 18 // ... code package main import &amp;#34;fmt&amp;#34; func main() { // hi fmt.Println(&amp;#34;Hello, World!&amp;#34;) } This is a regular paragraph.</description>
+      <description>Introdução Iniciando meu blog!
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing</description>
     </item>
     
     <item>
@@ -39,17 +34,6 @@ Copy 1 2 3 4 5 6 // comment int i = 0; for (; i &amp;lt; size; i++) { // todo } 
       
       <guid>https://berghetti.github.io/posts/markdown-syntax/</guid>
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://berghetti.github.io/about/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://berghetti.github.io/about/</guid>
-      <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
-Hugo makes use of a variety of open source projects including:
-https://github.com/yuin/goldmark https://github.</description>
     </item>
     
   </channel>
