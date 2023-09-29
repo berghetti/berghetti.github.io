@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>cteste2 on Mayco Blog</title>
-    <link>https://berghetti.github.io/categories/cteste2/</link>
-    <description>Recent content in cteste2 on Mayco Blog</description>
+    <title>Mayco S. Berghetti on Mayco Blog</title>
+    <link>https://berghetti.github.io/author/mayco-s.-berghetti/</link>
+    <description>Recent content in Mayco S. Berghetti on Mayco Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 26 Sep 2023 18:23:03 -0400</lastBuildDate><atom:link href="https://berghetti.github.io/categories/cteste2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Sep 2023 19:08:17 -0400</lastBuildDate><atom:link href="https://berghetti.github.io/author/mayco-s.-berghetti/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://berghetti.github.io/about/</link>
+      <pubDate>Thu, 28 Sep 2023 19:08:17 -0400</pubDate>
+      
+      <guid>https://berghetti.github.io/about/</guid>
+      <description>Um blog sobre programação, Linux, redes e outros assuntos, provavelmente relacionados
+à computação, que eu possa ter interesse.</description>
+    </item>
+    
     <item>
       <title>Meu Primeiro Post testeFirst</title>
       <link>https://berghetti.github.io/posts/first/</link>
