@@ -5,43 +5,6 @@
     <link>https://berghetti.github.io/categories/</link>
     <description>Recent content in Categories on Mayco Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
-    <lastBuildDate>Tue, 26 Sep 2023 18:23:03 -0400</lastBuildDate><atom:link href="https://berghetti.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>cteste1</title>
-      <link>https://berghetti.github.io/categories/cteste1/</link>
-      <pubDate>Tue, 26 Sep 2023 18:23:03 -0400</pubDate>
-      
-      <guid>https://berghetti.github.io/categories/cteste1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cteste2</title>
-      <link>https://berghetti.github.io/categories/cteste2/</link>
-      <pubDate>Tue, 26 Sep 2023 18:23:03 -0400</pubDate>
-      
-      <guid>https://berghetti.github.io/categories/cteste2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>syntax</title>
-      <link>https://berghetti.github.io/categories/syntax/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://berghetti.github.io/categories/syntax/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>themes</title>
-      <link>https://berghetti.github.io/categories/themes/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://berghetti.github.io/categories/themes/</guid>
-      <description></description>
-    </item>
-    
+    <language>pt-br</language><atom:link href="https://berghetti.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
