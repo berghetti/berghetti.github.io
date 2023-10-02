@@ -16,5 +16,15 @@
 à computação, que eu possa ter interesse.</description>
     </item>
     
+    <item>
+      <title>O qualificador &#39;restrict&#39; em C</title>
+      <link>https://berghetti.github.io/posts/restrict_keyword/</link>
+      <pubDate>Tue, 26 Sep 2023 18:23:03 -0400</pubDate>
+      
+      <guid>https://berghetti.github.io/posts/restrict_keyword/</guid>
+      <description>O qualificador restrict diz ao compilador que um ponteiro não tem um aliasing, ou seja, não existe outro ponteiro que modifique o objeto. Por exemplo, uma função que possui a assinatura int f(int *a, int *b), os ponteiros a e b podem apontar para o mesmo objeto. O compilador tem que levar isso em consideração ao gerar o código.
+Se sabemos que os ponteiros não apontam para o mesmo objeto, dizemos isso ao compilador usando a palavra-chave restrict.</description>
+    </item>
+    
   </channel>
 </rss>
