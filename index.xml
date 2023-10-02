@@ -17,5 +17,25 @@
 à computação, que eu possa ter interesse.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://berghetti.github.io/posts/restrict-keyword/aliasing.c.1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://berghetti.github.io/posts/restrict-keyword/aliasing.c.1/</guid>
+      <description>&amp;hellip; int a; int *p1 = &amp;amp;a; int *p2 = &amp;amp;a; &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://berghetti.github.io/posts/restrict-keyword/aliasing.c/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://berghetti.github.io/posts/restrict-keyword/aliasing.c/</guid>
+      <description>&amp;hellip; int a;
+int *p1 = &amp;amp;a; int *p2 = &amp;amp;a;
+&amp;hellip;</description>
+    </item>
+    
   </channel>
 </rss>
