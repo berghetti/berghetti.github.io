@@ -300,13 +300,18 @@
         </div>
 
         
-            <nav id="TableOfContents"></nav>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#entendendo-o-uso">Entendendo o uso.</a></li>
+  </ul>
+</nav>
         
 
 
         <div class="content">
             
-                <p>O qualificador <em>restrict</em> diz ao compilador que um ponteiro não tem um <em>aliasing</em>, ou seja, não existe outro ponteiro que modifique o objeto. Por exemplo, uma função que possui a assinatura <code>int f(int *a, int *b)</code>, os ponteiros <code>a</code> e <code>b</code> podem apontar para o mesmo objeto. O compilador tem que levar isso em consideração ao gerar o código.</p>
+                <h2 id="entendendo-o-uso">Entendendo o uso.</h2>
+<p>O qualificador <em>restrict</em> diz ao compilador que um ponteiro não tem um <em>aliasing</em>, ou seja, não existe outro ponteiro que modifique o objeto. Por exemplo, uma função que possui a assinatura <code>int f(int *a, int *b)</code>, os ponteiros <code>a</code> e <code>b</code> podem apontar para o mesmo objeto. O compilador tem que levar isso em consideração ao gerar o código.</p>
 <p>Se sabemos que os ponteiros não apontam para o mesmo objeto, dizemos isso ao compilador usando a palavra-chave <em>restrict</em>.  Isso permite que o código possa ser melhor otimizado.
 Por exemplo, tome as funções <code>f</code> e <code>g</code>abaixo. A única diferença entre elas é a assinatura.</p>
 
@@ -444,7 +449,7 @@ A função <code>g</code>, devido a não precisar carregar novamente o valor de 
                 <li>
                     
                         Word Count:
-                        299
+                        302
                     
                 </li>
             
@@ -460,7 +465,7 @@ A função <code>g</code>, devido a não precisar carregar novamente o valor de 
                     
                         Last modified: &nbsp;
                         <time>
-                            Oct 02 2023 20:34:53
+                            Oct 02 2023 20:45:19
                         </time>
                     
                 </li>
@@ -468,7 +473,7 @@ A função <code>g</code>, devido a não precisar carregar novamente o valor de 
 
             
                 <li title="blog/content/posts/restrict_keyword/index.md updated from https://stackedit.io/">
-                    1fb92ae
+                    5eb5f68
                 </li>
             
         </ul>
