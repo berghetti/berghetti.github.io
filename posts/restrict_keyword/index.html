@@ -263,7 +263,7 @@
                 
                     <div class="readtime">
                         <i class="bi bi-clock"></i>
-                        2
+                        3
                         mins to read
                     </div>
                 
@@ -302,7 +302,9 @@
         
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#entendendo-o-uso">Entendendo o uso.</a></li>
+    <li><a href="#entendendo-o-uso">Entendendo o uso</a></li>
+    <li><a href="#strict-aliasing">Strict aliasing</a></li>
+    <li><a href="#conclusão">Conclusão</a></li>
   </ul>
 </nav>
         
@@ -310,7 +312,7 @@
 
         <div class="content">
             
-                <h2 id="entendendo-o-uso">Entendendo o uso.</h2>
+                <h2 id="entendendo-o-uso">Entendendo o uso</h2>
 <p>O qualificador <em>restrict</em> diz ao compilador que um ponteiro não tem um <em>aliasing</em>, ou seja, não existe outro ponteiro que modifique o objeto. Por exemplo, uma função que possui a assinatura <code>int f(int *a, int *b)</code>, os ponteiros <code>a</code> e <code>b</code> podem apontar para o mesmo objeto. O compilador tem que levar isso em consideração ao gerar o código.</p>
 <p>Se sabemos que os ponteiros não apontam para o mesmo objeto, dizemos isso ao compilador usando a palavra-chave <em>restrict</em>.  Isso permite que o código possa ser melhor otimizado.
 Por exemplo, tome as funções <code>f</code> e <code>g</code>abaixo. A única diferença entre elas é a assinatura.</p>
@@ -403,6 +405,11 @@ Por exemplo, tome as funções <code>f</code> e <code>g</code>abaixo. A única d
 </div>
 <p>Na função <code>f</code>, temos três acessos à memória. Isso ocorre porque quando atualizamos o valor de <code>*b</code>, o compilador não tem garantia de que o objeto <code>*a</code> não foi modificado. Assim, para retornar o valor de <code>*a</code>, um novo acesso à memória é feito ao invés de, apenas, preservar o valor previamente atribuído.
 A função <code>g</code>, devido a não precisar carregar novamente o valor de <code>*a</code>, possui um acesso à memória a menos. Aqui o compilador pode assumir que o valor de <code>*a</code>não é alterado após a atribuição inicial.</p>
+<h2 id="strict-aliasing">Strict aliasing</h2>
+<p>O compilador GCC possui a opção <code>-fstrictest aliasing</code>, habilitada nos níveis de otimização<code>-O2</code>,<code> -O3</code> e <code>-Os</code>.  Com essa opção, o compilador segue uma regra que diz, ponteiros de tipos diferentes não apontam para o mesmo objeto. A exceção a regra são ponteiros do tipo <code>char</code>, que podem ser <em>aliases</em> para qualquer tipo.</p>
+<p>Caso a função <code>f</code>, apresentada acima, fosse implementada com a assinatura <code>long f(long *a, int *b)</code>, ou seja, ponteiros para tipos diferentes e com a opção <code>-fstrictest aliasing</code>, teríamos o mesmo efeito de usar o modificador <em>restrict</em>. O compilador assumirá, nesse caso, que os ponteiros não apontam para o mesmo objeto e irá otimizar o código.</p>
+<h2 id="conclusão">Conclusão</h2>
+<p>Caso tenha uma função que tenha mais de 1 ponteiro do mesmo tipo em seus parâmetros, ou que tenha mais de 1 ponteiro e algum deles é do tipo <code>char</code>, use o modificador <em>restrict</em> para habilitar melhor otimização no código. Claro, contanto que os ponteiros não apontem para o mesmo lugar. Utilizar um nível de otimização de, pelo menos, <code>-O2</code>. Para habilitar a regra de <em>aliasing</em> automaticamente para ponteiros de tipos diferentes.</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 
@@ -449,7 +456,7 @@ A função <code>g</code>, devido a não precisar carregar novamente o valor de 
                 <li>
                     
                         Word Count:
-                        302
+                        485
                     
                 </li>
             
@@ -465,7 +472,7 @@ A função <code>g</code>, devido a não precisar carregar novamente o valor de 
                     
                         Last modified: &nbsp;
                         <time>
-                            Oct 02 2023 20:47:23
+                            Oct 02 2023 21:13:48
                         </time>
                     
                 </li>
@@ -473,7 +480,7 @@ A função <code>g</code>, devido a não precisar carregar novamente o valor de 
 
             
                 <li title="blog/content/posts/restrict_keyword/index.md updated from https://stackedit.io/">
-                    85a9274
+                    99bfe3e
                 </li>
             
         </ul>
