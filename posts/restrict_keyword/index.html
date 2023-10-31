@@ -70,8 +70,8 @@
 
         <link
             rel="stylesheet"
-            href="/css/index.min.a06ad437bb09085d51a2f3101937426cdbc63eb6e810906963e734fd6bbe7b04814c7334aa25fd36b7f786dd4b6ed1ce63daff61cbaa736eb5a04ef15cc262e5.css"
-            integrity="sha512-oGrUN7sJCF1RovMQGTdCbNvGPrboEJBpY&#43;c0/Wu&#43;ewSBTHM0qiX9Nrf3ht1LbtHOY9r/Ycuqc261oE7xXMJi5Q==" />
+            href="/css/index.min.4b75df69a8910d21a0e198e66672e0d10cafa27732cc6ecbd5b835c551f80d43af4fac3bd5634ad423fa20e03efbdf84ee120d6ad7637aadef673d9df28d0693.css"
+            integrity="sha512-S3XfaaiRDSGg4ZjmZnLg0QyvoncyzG7L1bg1xVH4DUOvT6w71WNK1CP6IOA&#43;&#43;9&#43;E7hINatdjeq3vZz2d8o0Gkw==" />
     
 
 </head>
@@ -313,7 +313,7 @@
         <div class="content">
             
                 <h2 id="entendendo-o-uso">Entendendo o uso</h2>
-<p>O qualificador <em>restrict</em> diz ao compilador que um ponteiro não tem um <em>aliasing</em>, ou seja, não existe outro ponteiro que modifique o objeto. Por exemplo, uma função que possui a assinatura <code>int f(int *a, int *b)</code>, os ponteiros <code>a</code> e <code>b</code> podem apontar para o mesmo objeto. O compilador tem que levar isso em consideração ao gerar o código.</p>
+<p>O qualificador <em>restrict</em> diz ao compilador que um ponteiro não tem um <em>aliasing</em>, ou seja, não existe outro ponteiro que modifique o objeto <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. Por exemplo, uma função que possui a assinatura <code>int f(int *a, int *b)</code>, os ponteiros <code>a</code> e <code>b</code> podem apontar para o mesmo objeto. O compilador tem que levar isso em consideração ao gerar o código.</p>
 <p>Se sabemos que os ponteiros não apontam para o mesmo objeto, dizemos isso ao compilador usando a palavra-chave <em>restrict</em>.  Isso permite que o código possa ser melhor otimizado.
 Por exemplo, tome as funções <code>f</code> e <code>g</code>abaixo. A única diferença entre elas é a assinatura.</p>
 
@@ -406,16 +406,49 @@ Por exemplo, tome as funções <code>f</code> e <code>g</code>abaixo. A única d
 <p>Na função <code>f</code>, temos três acessos à memória. Isso ocorre porque quando atualizamos o valor de <code>*b</code>, o compilador não tem garantia de que o objeto <code>*a</code> não foi modificado. Assim, para retornar o valor de <code>*a</code>, um novo acesso à memória é feito ao invés de, apenas, preservar o valor previamente atribuído.
 A função <code>g</code>, devido a não precisar carregar novamente o valor de <code>*a</code>, possui um acesso à memória a menos. Aqui o compilador pode assumir que o valor de <code>*a</code>não é alterado após a atribuição inicial.</p>
 <h2 id="strict-aliasing">Strict aliasing</h2>
-<p>O compilador GCC possui a opção <code>-fstrictest aliasing</code>, habilitada nos níveis de otimização<code>-O2</code>,<code> -O3</code> e <code>-Os</code>[¹].  Com essa opção, o compilador segue uma regra que diz, <strong>ponteiros de tipos diferentes não apontam para o mesmo objeto</strong>. A exceção a regra são ponteiros do tipo <code>char</code>, que podem ser <em>aliases</em> para qualquer tipo.</p>
+<p>O compilador GCC possui a opção <code>-fstrictest aliasing</code>, habilitada nos níveis de otimização<code>-O2</code>,<code> -O3</code> e <code>-Os</code><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.  Com essa opção, o compilador segue uma regra que diz, <strong>ponteiros de tipos diferentes não apontam para o mesmo objeto</strong>. A exceção a regra são ponteiros do tipo <code>char</code>, que podem ser <em>aliases</em> para qualquer tipo.</p>
 <p>Caso a função <code>f</code>, apresentada acima, fosse implementada com a assinatura <code>long f(long *a, int *b)</code>, ou seja, ponteiros para tipos diferentes, e compilada com a opção <code>-fstrictest aliasing</code>, teríamos o mesmo efeito de usar o modificador <em>restrict</em>. O compilador assumirá, nesse caso, que os ponteiros não apontam para o mesmo objeto e irá otimizar o código.</p>
 <h2 id="conclusão">Conclusão</h2>
 <p>Caso tenha uma função que tenha mais de 1 ponteiro do mesmo tipo em seus parâmetros, ou que tenha mais de 1 ponteiro e algum deles é do tipo <code>char</code>, use o modificador <em>restrict</em> para habilitar melhor otimização no código. Claro, contanto que os ponteiros não apontem para o mesmo lugar. Utilizar um nível de otimização de, pelo menos, <code>-O2</code>. Para habilitar a regra de <em>aliasing</em> automaticamente para ponteiros de tipos diferentes.</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf">https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf</a>, section 6.7.3.7&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html#index-fstrict-aliasing">https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html#index-fstrict-aliasing</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
             
         </div>
+
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "berghetti" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     </article>
+
 
         </main>
 
@@ -456,7 +489,7 @@ A função <code>g</code>, devido a não precisar carregar novamente o valor de 
                 <li>
                     
                         Word Count:
-                        486
+                        491
                     
                 </li>
             
@@ -472,7 +505,7 @@ A função <code>g</code>, devido a não precisar carregar novamente o valor de 
                     
                         Last modified: &nbsp;
                         <time>
-                            Oct 02 2023 21:31:23
+                            Oct 03 2023 10:50:21
                         </time>
                     
                 </li>
@@ -480,7 +513,7 @@ A função <code>g</code>, devido a não precisar carregar novamente o valor de 
 
             
                 <li title="blog/content/posts/restrict_keyword/index.md updated from https://stackedit.io/">
-                    4b61f9b
+                    ededb73
                 </li>
             
         </ul>
