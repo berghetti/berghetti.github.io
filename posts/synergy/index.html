@@ -1,0 +1,47 @@
+<!doctype html><html lang=pt-br><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.123.7"><meta name=description content><meta name=keywords content><meta name=author content><title>Synergy: A Fast and Scalable Feedback-Driven Scheduler for Datacenter Applications |
+Blog
+</title><link rel=stylesheet href=/css/index.min.4b75df69a8910d21a0e198e66672e0d10cafa27732cc6ecbd5b835c551f80d43af4fac3bd5634ad423fa20e03efbdf84ee120d6ad7637aadef673d9df28d0693.css integrity="sha512-S3XfaaiRDSGg4ZjmZnLg0QyvoncyzG7L1bg1xVH4DUOvT6w71WNK1CP6IOA++9+E7hINatdjeq3vZz2d8o0Gkw=="></head><body><header class=header><div class=header_left></div><div class=header_middle>Synergy: A Fast and Scalable Feedback-Driven Scheduler for Datacenter Applications -
+Blog</div></header><main><aside class=sidebar><ul class=section-tree><li class="dir opened-dir"><span class=dir-text>Posts</span><ul class=section-tree><li class=file><a href=https://berghetti.github.io/posts/synergy/ title=./posts/synergy/>Synergy: A Fast and Scalable Feedback-Driven Scheduler for Datacenter Applications</a></li><li class=file><a href=https://berghetti.github.io/posts/user_interrupts/ title=./posts/user_interrupts/>User Interrupts</a></li><li class=file><a href=https://berghetti.github.io/posts/restrict_keyword/ title=./posts/restrict_keyword/>O qualificador 'restrict' em C</a></li></ul></li><li class=file><a href=https://berghetti.github.io/about/ title=./about/>About</a></li></ul></aside><aside class=exapandable></aside><article class=main><button class=sidebar-toggle-btn type=menu aria-expanded=false aria-haspopup=true>
+<i class="bi bi-list"></i></button><div class=breadcumb><i class="bi bi-folder"></i>
+<a href=https://berghetti.github.io/ class=bread-btn><i class="bi bi-house-fill"></i>
+Home
+</a>/
+<a href=https://berghetti.github.io/posts/ class=bread-btn>Posts
+</a>/
+<a href=https://berghetti.github.io/posts/synergy/ class=bread-btn>Synergy: A Fast and Scalable Feedback-Driven Scheduler for Datacenter Applications</a></div><div class=title><h1 class=title-header>Synergy: A Fast and Scalable Feedback-Driven Scheduler for Datacenter Applications</h1><div class=author-date-readtime><div class=author><i class="bi bi-person"></i>
+<a href=https://berghetti.github.io/authors/mayco-s.-berghetti/ class=cat-btn>Mayco S. Berghetti</a></div><div class=date><i class="bi bi-calendar3"></i>
+<time datetime=2026.06.06>2026.06.06</time></div><div class=readtime><i class="bi bi-clock"></i>
+2
+mins to read</div></div></div><div class=article-meta><div class=categories><i class="bi bi-bookmarks" title=Categories></i>
+<a href=https://berghetti.github.io/categories/computing/ class=cat-btn>computing
+</a><a href=https://berghetti.github.io/categories/research/ class=cat-btn>research</a></div><div class=tags><i class="bi bi-tags" title=Tags></i>
+<a href=https://berghetti.github.io/tags/scheduling/ class=tag-btn>scheduling
+</a><a href=https://berghetti.github.io/tags/datacenter/ class=tag-btn>datacenter
+</a><a href=https://berghetti.github.io/tags/networking/ class=tag-btn>networking
+</a><a href=https://berghetti.github.io/tags/paper/ class=tag-btn>paper</a></div></div><nav id=TableOfContents><ul><li><a href=#publication>Publication</a></li><li><a href=#abstract>Abstract</a></li><li><a href=#key-contributions>Key Contributions</a></li><li><a href=#reference>Reference</a></li></ul></nav><div class=content><h2 id=publication>Publication</h2><p>The paper <em>Synergy: A Fast and Scalable Feedback-Driven Scheduler for Datacenter
+Applications</em> has been accepted at the <strong>25th IFIP Networking 2026 Conference</strong>,
+held in Lugano, Switzerland, May 24-27, 2026. It was presented in
+<strong>Technical Session B.2 — Datacenter & Traffic Engineering</strong> <sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>.</p><p>The paper is co-authored with <strong>Fabrício Carvalho</strong> and <strong>Ronaldo Ferreira</strong>.</p><h2 id=abstract>Abstract</h2><p>Microsecond-scale datacenter applications demand strict latency guarantees
+while operating under high load and variable service times. This environment
+often involves a mix of extremely short and long requests, where short
+requests — lasting just a few microseconds — are frequently delayed by longer
+ones due to Head-of-Line (HOL) blocking, leading to higher latencies,
+especially at the tail.</p><p>However, existing approaches to mitigate HOL blocking, such as centralized
+dispatching, fine-grained preemption, and resource reservation, face
+fundamental scalability limitations.</p><p>This work introduces <strong>Synergy</strong>, a cooperative, application-aware scheduling
+system that uses direct feedback from applications to prioritize short
+requests, dynamically adapts scheduling parameters, and avoids unnecessary
+preemptions. Synergy adopts a decentralized architecture with distributed
+queues, job-aware preemption, and dynamic quantum sizing. By eliminating
+centralized classification and using real-time application measurements,
+Synergy effectively mitigates HOL blocking without compromising throughput.
+Synergy outperforms state-of-the-art systems, achieving up to <strong>43% higher
+throughput</strong> while meeting microsecond-scale service-level objectives.</p><h2 id=key-contributions>Key Contributions</h2><ul><li><strong>Decentralized architecture</strong> — distributed queues replace a centralized
+dispatcher, removing a scalability bottleneck.</li><li><strong>Application-aware, feedback-driven</strong> — applications directly signal
+information that the scheduler uses to prioritize short requests.</li><li><strong>Job-aware preemption</strong> — preemption is triggered only when it actually
+helps, avoiding unnecessary preemptions.</li><li><strong>Dynamic quantum sizing</strong> — quantum sizes adapt in real time to the
+workload.</li><li><strong>HOL blocking mitigation without throughput loss</strong> — up to 43% higher
+throughput compared to state-of-the-art systems, while still meeting
+microsecond-scale SLOs.</li></ul><h2 id=reference>Reference</h2><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p><a href=https://dl.ifip.org/db/conf/networking/networking2026/1571259812.pdf>https://dl.ifip.org/db/conf/networking/networking2026/1571259812.pdf</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></div><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//berghetti.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></article></main><footer class=footer><div class=footer-left><ul class=social></ul></div><div class=footer-right><ul class="control status clearfix"><li>Word Count:
+284</li><li>Last modified: &nbsp;
+<time>Jun 06 2026 12:11:08</time></li><li title></li></ul></div></footer></body><script type=text/javascript src=/js/index.min.76f28ad9d7f1e1b68cfc55f930e89f7439bf72c0def552fa19d37555afaaaa776fc8533a913ac30e0162a7fb08415d19d1588e1d9a4f3328f0614c52f1a3963b.js integrity="sha512-dvKK2dfx4baM/FX5MOifdDm/csDe9VL6GdN1Va+qqndvyFM6kTrDDgFip/sIQV0Z0ViOHZpPMyjwYUxS8aOWOw=="></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css></html>
